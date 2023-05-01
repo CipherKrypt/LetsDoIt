@@ -1,12 +1,21 @@
 {% extends "LetsDoIt/layout.html" %}
 
 {% block body %}
+<h1>Lets Do It</h1>
     <ul>
-        {% for task in tasks %}
-            <li> {{task}} </li>
+        {% for task,desc in tasks %}
+            <li> <h3>{{task}}</h3>
+            {{ desc }}
+            </li>
+        {% empty %}
+            <li> <h3>No Tasks :(</h3>
+            Click 'Add New Task' to get started!
+            </li>
         {% endfor %}
 
     </ul>
+
+    <a href= "{% url 'LetsDoIt:addtask' %}">Add New Task</a>
 
 {% endblock %}
         
