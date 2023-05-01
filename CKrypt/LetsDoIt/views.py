@@ -5,3 +5,6 @@ def index(request):
     return render(request, "LetsDoIt/index.html", {
         "tasks": tasks
     })
+
+def addtask(request):
+    return render(request, "LetsDoIt/add.html")

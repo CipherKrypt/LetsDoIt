@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <title>Let's Do It</title>
-    </head>
-    <body>
-        <ul>
-            {% for task in tasks %}
-                <li> {{task}} </li>
-            {% endfor %}
+{% extends "LetsDoIt/layout.html" %}
 
-        </ul>
-    </body>
-</html>
+{% block body %}
+    <ul>
+        {% for task in tasks %}
+            <li> {{task}} </li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}
+        
